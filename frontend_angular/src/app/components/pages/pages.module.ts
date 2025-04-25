@@ -7,6 +7,7 @@ import { LayoutsModule } from '../layouts/layouts.module';
 import { ReportsComponent } from './reports/reports.component';
 import { AuthGuard } from '../../guards/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
+import { ReportDetailComponent } from './report-detail/report-detail.component';
 
 const routes: Routes = [
   {
@@ -18,9 +19,13 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'reports',
-    component: ReportsComponent, 
-    canActivate: [AuthGuard] 
+    path: 'detail',
+    loadChildren: () => import('../layouts/layouts.module').then(m => m.LayoutsModule)
+  },
+  {
+    path: 'report', 
+    component: ReportDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'auth',
@@ -34,6 +39,7 @@ const routes: Routes = [
     AboutComponent,
     HomeComponent,
     ReportsComponent,
+    ReportDetailComponent,
   ],
   imports: [
     CommonModule,

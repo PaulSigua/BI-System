@@ -24,7 +24,7 @@ export class ReportService {
     return this.http.get<PowerBIReport[]>(`${this.baseUrl}/reports/owner/${ownerId}`, { headers: this.headers() });
   }
 
-  getReportByName(name: string): Observable<PowerBIReport> {
-    return this.http.get<PowerBIReport>(`${this.baseUrl}/reports/name/${encodeURIComponent(name)}`, { headers: this.headers() });
+  getReportByName(ownerId: number): Observable<PowerBIReport[]> {
+    return this.http.get<PowerBIReport[]>(`${this.baseUrl}/reports/name/${ownerId}`, { headers: this.headers() });
   }
 }

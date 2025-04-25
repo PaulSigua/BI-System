@@ -46,6 +46,9 @@ class ReportOut(BaseModel):
     OwnerId: int
     CreatedAt: datetime.datetime
 
+class ReportName(BaseModel):
+    ReportName: str
+
 class AssignRole(BaseModel):
     user_id: int
     role_id: int
@@ -126,6 +129,15 @@ def get_reports_by_owner(owner_id: int, db: Session = Depends(get_db)):
           .filter(models.PowerBIReport.OwnerId == owner_id)
           .all()
     )
+
+@router.get("/reports/name/{owner_id}", response_model=List[ReportName])
+def get_reports_by_owner(owner_id: int, db: Session = Depends(get_db)):
+    return (
+        db.query(models.PowerBIReport)
+          .filter(models.PowerBIReport.OwnerId == owner_id)
+          .all()
+    )
+
 @router.post("/roles/assign-report/", status_code=201)
 def assign_report(payload: AssignReport, db: Session = Depends(get_db)):
     role = db.query(models.Role).get(payload.role_id)

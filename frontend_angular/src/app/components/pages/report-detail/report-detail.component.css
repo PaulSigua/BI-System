@@ -1,0 +1,23 @@
+.layout-container {
+    display: flex;
+    height: calc(100vh - /* altura de tu header */ 60px); /* ajusta según tu header */
+  }
+  
+  /* El sidenav por defecto controla su propio ancho, p.ej. 240px */
+  app-sidenav {
+    flex: 0 0 240px;    /* ancho fijo */
+    height: 100%;
+    overflow-y: auto;    /* si el menú crece, scroll interno */
+  }
+  
+  /* El contenido ocupa todo lo que queda */
+  .layout-content {
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  app-sidenav {
+    flex-shrink: 0;
+  }
+  

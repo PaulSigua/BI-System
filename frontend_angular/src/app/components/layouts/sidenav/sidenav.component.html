@@ -2,15 +2,10 @@
   <div class="container-search">
     <div class="container-search">
       <form>
-        <input
-        type="search"
-        name="search"
-        id="search"
-        placeholder="Buscar"
-      />      
+        <input type="search" name="search" id="search" placeholder="Buscar" />
       </form>
     </div>
-    
+
   </div>
 
   <div class="container-options">
@@ -18,7 +13,11 @@
   </div>
   <ul>
     <li *ngFor="let report of reports">
-      <a href="#" [routerLink]="'/' + report.ReportName">{{ report.ReportName }}</a>
+      <a [routerLink]="['/report', report.ReportId]" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        {{ report.ReportName }}
+      </a>
     </li>
   </ul>
+
 </nav>

@@ -148,6 +148,13 @@ form button:hover {
     background-color: var(--button-bg-color);
 }
 
+.error {
+    border-radius: 5px;
+    color: #ff0000;
+    background-color: #ffc8c8;
+    border: 1px solid #ff0000;
+}
+
 /* Imagen al costado del formulario */
 .container-img {
     display: flex;

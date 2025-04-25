@@ -1,0 +1,13 @@
+<app-sidenav></app-sidenav>
+
+<div class="layout-container">
+    <div class="layout-content">
+        <div *ngIf="report; else notFound">
+            <h2>{{ report.ReportName }}</h2>
+            <iframe [src]="safeUrl" style="width:100%; height:600px;"></iframe>
+        </div>
+        <ng-template #notFound>
+            <p>Reporte no encontrado.</p>
+        </ng-template>
+    </div>
+</div>

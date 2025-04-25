@@ -40,7 +40,7 @@ export class AuthService {
     localStorage.removeItem('access_token');
     localStorage.removeItem('user');
     this.currentUserSubject.next(null);
-    this.router.navigate(['/login']);
+    this.router.navigate([('#')]);
   }
 
   getToken(): string | null {

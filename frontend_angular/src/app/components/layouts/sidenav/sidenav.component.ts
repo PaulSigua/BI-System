@@ -17,7 +17,7 @@ export class SidenavComponent implements OnInit {
     private reportService: ReportService,
     private authService: AuthService,
     private sanitizer: DomSanitizer,
-  ) {}
+  ) { }
 
   ngOnInit() {
     const user = this.authService.getCurrentUser();
@@ -33,10 +33,10 @@ export class SidenavComponent implements OnInit {
   }
 
   private loadReports(ownerId: number) {
-    this.reportService.getReportsByOwner(ownerId).subscribe({
+    this.reportService.getReportByName(ownerId).subscribe({
       next: data => {
         this.reports = data;
-        console.log('Reports loaded:', this.reports); 
+        console.log('Reports loaded:', this.reports);
       },
       error: err => console.error('Error loading reports', err)
     });

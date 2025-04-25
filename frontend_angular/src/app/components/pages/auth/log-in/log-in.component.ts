@@ -16,7 +16,17 @@ export class LogInComponent {
 
   login() {
     this.authService.login(this.credentials).subscribe({
-      next: () => this.router.navigate(['/reports']),
+      next: () => {
+        const user = JSON.parse(localStorage.getItem('user')!);
+        const userReports = JSON.parse(localStorage.getItem('reports') || '[]')
+          .filter((r: any) => r.OwnerId === user.UserId);
+      
+        if (userReports.length) {
+          this.router.navigate(['report', userReports[0].ReportId]);
+        } else {
+          this.router.navigate(['report']);
+        }
+      },
       error: () => this.error = 'Credenciales inválidas'
     });
   }
