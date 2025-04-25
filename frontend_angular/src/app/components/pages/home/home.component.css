@@ -1,0 +1,232 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 10px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.container-content-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.container-content-nav .icon-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.container-content-nav .icon-nav img {
+    max-width: 25px;
+    margin-right: 5px;
+}
+
+.container-content-nav .icon-nav h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.container-ruts-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.container-ruts-nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.container-ruts-nav ul li a:hover {
+    color: var(--text-color);
+}
+
+.container-content-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.hero-wrapper {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+}
+
+.hero-wrapper nav {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-wrapper nav a {
+    color: var(--text-color);
+}
+
+.hero-wrapper nav a:hover {
+    color: var(--accent-color);
+}
+
+.hero-wrapper .hero-section {
+    position: relative;
+    z-index: 1;
+    padding: 140px 0 100px;
+    /* empuja contenido + espacio para nav */
+    text-align: left;
+}
+
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.0);
+    z-index: 0;
+}
+
+.container-content-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-text {
+    display: grid;
+    gap: 20px;
+    text-align: left;
+    max-width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.container-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-text {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inner-text h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.inner-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.inner-button button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 119, 255, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 260px;
+}
+
+.inner-button button a {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-button button:hover {
+    background-color: var(--button-bg-color);
+    transform: translateY(-2px);
+}
+
+.inner-img img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inner-text {
+        width: 90%;
+    }
+
+    .inner-img img {
+        max-width: 300px;
+    }
+}

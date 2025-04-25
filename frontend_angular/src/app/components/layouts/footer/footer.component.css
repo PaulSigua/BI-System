@@ -1,0 +1,62 @@
+footer {
+    background-color: #000000;
+    color: #eee;
+    padding: 40px 20px;
+    margin-top: 90px;
+    height: 350px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h2 {
+    font-size: 1.2em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info,
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info a:hover {
+    text-decoration: underline;
+    transition: color 0.4s ease;
+}
+
+.social-media a {
+    font-size: 24px;
+    /* Tamaño del icono */
+    color: #fff;
+    /* Color blanco para contrastar con fondo oscuro */
+    margin: 0 5px;
+    /* Espaciado entre iconos */
+    transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+    color: var(--bg-a-color);
+    /* Cambia a otro color al pasar el cursor */
+}

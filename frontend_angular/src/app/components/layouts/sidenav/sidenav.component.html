@@ -1,0 +1,24 @@
+<nav class="sidenav">
+  <div class="container-search">
+    <div class="container-search">
+      <form>
+        <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Buscar"
+      />      
+      </form>
+    </div>
+    
+  </div>
+
+  <div class="container-options">
+    <p>MENU PRINCIPAL</p>
+  </div>
+  <ul>
+    <li *ngFor="let report of reports">
+      <a href="#" [routerLink]="'/' + report.ReportName">{{ report.ReportName }}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,137 @@
+.sidenav {
+    width: 250px;
+    min-width: 250px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+}
+
+.container-search {
+    margin-bottom: 20px;
+}
+
+.container-search input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-search input:focus {
+    border-color: var(--border-color);
+    box-shadow: 0 0 5px rgba(216, 216, 216, 0.1);
+}
+
+.container-options p {
+    margin: 0;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.options a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.options a:hover {
+    background-color: #eaeaea;
+}
+
+/* Sobremarcado de la opción activa */
+.options a.active {
+    background-color: var(--bg-a-color);
+}
+
+.options a img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.options a h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* La flecha rota si el toggle manual está activo */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--border-color);
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 20px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Cuando la clase 'open' está presente, se despliega con animación */
+.dropdown.open .dropdown-menu {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Espaciado para todos los enlaces */
+a {
+    padding: 4px 0;
+}
+
+.sidenav {
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidenav li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidenav li:hover {
+    background-color: #e0e0e0;
+}

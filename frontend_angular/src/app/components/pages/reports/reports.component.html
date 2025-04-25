@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="layout-container">
+  <app-sidenav></app-sidenav>
+
+  <main class="layout-content">
+    <div class="container-title">
+      <h1>Dashboard Rendimiento de los colaboradores</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque optio iste 
+        vero a doloribus totam ab numquam nihil! Debitis eveniet in aperiam eligendi maiores 
+        praesentium at facilis exercitationem eaque dolores.</p>
+    </div>
+
+    <div *ngIf="reports.length; else noReports" class="reports-grid">
+      <div *ngFor="let r of reports" class="report-card">
+        <iframe title="BI Report" [src]="getSafeUrl(r.ReportUrl)" frameborder="0" allowfullscreen></iframe>
+        <p class="report-title">Microsoft Power BI</p>
+      </div>
+    </div>
+
+    <ng-template #noReports>
+      <p>No hay reportes disponibles.</p>
+    </ng-template>
+  </main>
+</div>

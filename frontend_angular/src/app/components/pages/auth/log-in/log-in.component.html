@@ -1,0 +1,28 @@
+<nav>
+  <div class="container-content-nav">
+    <div class="icon-nav">
+      <a routerLink="/">
+        <img src="assets/icon-logo.Bi0O_rGO_Z1iLfJp.svg" alt="" />
+        <h2>StarFlowers</h2>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-main">
+  <main>
+    <div class="container-form">
+      <h2>Iniciar Sesión</h2>
+      <p>Ingrese sus credenciales por favor:</p>
+      <form (submit)="login()">
+        <input type="username" [(ngModel)]="credentials.Username" name="username" placeholder="Correo" required class="input" />
+        <input type="password" [(ngModel)]="credentials.PasswordHash" name="password" placeholder="Contraseña" required class="input mt-2" />
+        <button>Ingresar</button>
+        <p class="text-red-600 mt-2" *ngIf="error">{{ error }}</p>
+      </form>
+    </div>
+    <div class="container-img">
+      <img src="assets/working.B14Oj-uA_ZzsSsx.webp" alt="" />
+    </div>
+  </main>
+</div>

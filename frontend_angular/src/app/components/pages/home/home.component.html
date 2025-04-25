@@ -1,0 +1,91 @@
+<div>
+<!-- HTML -->
+<div class="hero-wrapper" [ngStyle]="{'background-image': 'url(assets/hero-image.png)'}">
+    <nav>
+      <div class="container-content-nav">
+        <div class="icon-nav">
+          <a href="/">
+            <img src="assets/icon-logo.Bi0O_rGO_Z1iLfJp.svg" alt="">
+            <h2>StarFlowers</h2>
+          </a>
+        </div>
+        <div class="container-ruts-nav">
+          <ul>
+            <li *ngFor="let p of pages">
+              <a [routerLink]="'auth/' + p.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+                {{ p.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <header class="hero-section">
+      <div class="container-content-header">
+        <div class="header-text">
+          <h1>Centro de Control de Power BI para los usuarios dentro de la empresa</h1>
+          <p>
+            Nuestro sistema tiene el objetivo de controlar la información que se maneja
+            en la plataforma Power BI. Esto garantiza que la información no
+            sea pública para cualquier persona, sino que deberá contar con los respectivos permisos.
+          </p>
+        </div>
+      </div>
+    </header>
+  </div>
+  
+
+    <div class="container-inner">
+        <div class="inner-text">
+            <h2>Tu información estratégica, protegida y siempre disponible</h2>
+            <p>Accede al centro de control que asegura que solo las personas autorizadas pueden visualizar los reportes más importantes de tu área.</p>
+            <div class="inner-button">
+                <button>
+                    <a href="/auth/login">
+                        Inicia sesión
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="inner-img">
+            <img src="assets/gif-inner-1.gif" alt="Seguridad en datos empresariales">
+        </div>
+    </div>
+    
+    <div class="container-inner">
+        <div class="inner-text">
+            <h2>Impulsa tus decisiones con información clara y segura</h2>
+            <p>Ya seas parte del equipo de ventas, costos o gerencia, aquí tienes un espacio centralizado para trabajar con datos actualizados y bien gestionados.</p>
+            <div class="inner-button">
+                <button>
+                    <a href="/login">
+                        Descubre el poder de tus datos
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="inner-img">
+            <img src="assets/gif-inner-2.gif" alt="Acceso inteligente a reportes">
+        </div>
+    </div>
+    
+    <div class="container-inner">
+        <div class="inner-text">
+            <h2>Un sistema hecho para ti y tu equipo</h2>
+            <p>Control total, acceso rápido y una plataforma diseñada para facilitar tu día a día. Confía en una herramienta pensada para líderes como tú.</p>
+            <div class="inner-button">
+                <button>
+                    <a href="/login">
+                        Empieza a tomar el control
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="inner-img">
+            <img src="assets/gif-inner-3.gif" alt="Gestión empresarial efectiva">
+        </div>
+    </div>
+    
+</div>
+<app-footer></app-footer>
