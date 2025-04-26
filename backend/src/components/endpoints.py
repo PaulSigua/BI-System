@@ -138,6 +138,19 @@ def get_reports_by_owner(owner_id: int, db: Session = Depends(get_db)):
           .all()
     )
 
+# agregado en commit
+@router.get("/rol/{user_id}", response_model=List[AssignRole])
+def get_rol_by_user(user_id: int, db: Session = Depends(get_db)):
+    return (
+        db.query(models.Role)
+        .filter(models.Role.RoleId == user_id)
+        .all()
+    )
+
+@router.get("/rol/user/")
+def get_user_rol()
+# fin
+
 @router.post("/roles/assign-report/", status_code=201)
 def assign_report(payload: AssignReport, db: Session = Depends(get_db)):
     role = db.query(models.Role).get(payload.role_id)

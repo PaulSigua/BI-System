@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { ReportDetailComponent } from '../pages/report-detail/report-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: SidenavComponent },
   { path: 'report/:id', component: ReportDetailComponent },
 ]
